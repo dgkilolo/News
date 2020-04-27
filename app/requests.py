@@ -26,6 +26,7 @@ def process_results(news_results):
   '''
 
   process_results = []
+  
   for source_item in news_results:
     id = source_item.get('id')
     name = source_item.get('name')
