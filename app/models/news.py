@@ -10,15 +10,15 @@ class News:
     self.category = category
     self.url = url
 
-# class Articles:
-#   '''
-#   Articles class to define news article objects.
-#   '''
+class Articles:
+  '''
+  Articles class to define news article objects.
+  '''
 
-#   def __init__ (self, author, title, description, url, publishedAt, content):
-#     self.author = author
-#     self.title = title
-#     self.description = description
-#     self.url = url
-#     self.publishedAt = publishedAt
-#     self.content = content
+  def __init__ (self, author, title, description, url, publishedAt, content):
+    self.author = author
+    self.title = title
+    self.description = description
+    self.url = url
+    self.publishedAt = publishedAt
+    self.content = content
