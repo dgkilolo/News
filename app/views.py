@@ -18,7 +18,7 @@ def index():
     return render_template('index.html', title = title, sources = sources )
 
 @app.route('/search/<source_id>')
-def sourceArticles(source_id):
+def ArticlesNewsSource(source_id):
     '''
     Function that displays the articles from a particluar source.
     '''

@@ -9,8 +9,10 @@
   <div  class="col-md-4 " class="david" >
     <h4>{{source.name}}</h4>          
     <li>{{source.description}}</li></a>
-    <p>For Articles <a href="/search/{{source.id}}">click here</a></p>
     <br>
+    <p>For Articles <a href="/search/{{source.id}}">click here</a></p>
+    <hr>
+    <br>    
   </div>
   {%endfor%}
 
@@ -22,11 +24,12 @@
     <div  class="col-md-6 " class="card" >
     <div id="news" >
       <h4><u><strong>{{article.title}}</strong></u></h4>  
-      <li>{{article.author}}</li>   
+      <li>{{article.author}}</li>  
+      <br> 
       <p>{{article.content}}</p>
-      <a href="{{article.publishedAt}}"><li>Read more</li></a>
+      <a href="{{article.publishedAt}}"><p>Read more</p></a>
       <span class="p"><p>  {{article.url}}</span></p>
-      <br>
+      
     </div> 
     </div>
     {%endfor%}

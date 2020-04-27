@@ -1,6 +1,16 @@
 body{
-  background-color: silver;
+  background-color:#154360;
+  color: white;
 }
 .col-md-4 {
   height: 200px;
+  
+}
+h1{
+  text-align: center;
+  color: black;
+}
+.slogan {
+  text-align: center;
+  color: black;
 }
