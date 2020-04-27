@@ -57,30 +57,30 @@ def get_news():
 
   return sources_results
 
-# def get_articles(source_id):
-#   '''
-#   Function that gets the json response from the source url
-#   '''
-#   article_url = articles_base_urls.format('top-headlines', source_id, api_key)
-#   print(article_url)
-#   with urllib.request.urlopen(article_url) as url:
-#     article_data = url.read()
-#     articles_response = json.loads(article_data)
+def get_articles(source_id):
+  '''
+  Function that gets the json response from the source url
+  '''
+  article_url = articles_base_urls.format('top-headlines', source_id, api_key)
+  print(article_url)
+  with urllib.request.urlopen(article_url) as url:
+    article_data = url.read()
+    articles_response = json.loads(article_data)
 
-#     if articles_response['articles']:
-#       article_list = articles_response['articles']
+    if articles_response['articles']:
+      article_list = articles_response['articles']
 
-#       article_result_list = []
+      article_result_list = []
 
-#       for article in article_list:
-#         author = article.get('author')
-#         title = article.get('title')
-#         descriptions = article.get('description')
-#         publishedAt = article.get('publishedAt')
-#         url = article.get('url')
-#         content = article.get('content')
+      for article in article_list:
+        author = article.get('author')
+        title = article.get('title')
+        descriptions = article.get('description')
+        publishedAt = article.get('publishedAt')
+        url = article.get('url')
+        content = article.get('content')
 
-#         articles_object = Articles(author,title,descriptions,publishedAt,url,content)
-#         article_result_list.append(articles_object)
-#   return  article_result_list
+        articles_object = Articles(author,title,descriptions,publishedAt,url,content)
+        article_result_list.append(articles_object)
+  return  article_result_list
 
