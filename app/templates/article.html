@@ -1,0 +1,24 @@
+<!-- <html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Articles Top </title>
+        {% endif %}
+    </head>
+    <body>
+      <h1>Hello world 3</h1>
+      <h3>Articles sources</h3>
+      <h4>{{articles.name}}</h4>
+      <ul>
+        {%for article in article_results%}
+          <h4>{{article.name}}</h4>           
+          <!-- <a href="/search/{{source.url}}"> -->
+          <li>{{article.description}}</li></a>
+          <a href="{{source.url}}"><li>{{article.url}}</li></a>
+          <li>{{article.category}}</li>
+        {%endfor%}
+      </ul>      
+    </body>
+</html> -->
