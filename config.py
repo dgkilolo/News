@@ -6,6 +6,7 @@ class Config:
     '''
     NEWS_API_BASE_URL = 'http://newsapi.org/v2/sources?&apiKey={}'
     NEWS_API_ARTICLES_URL = 'http://newsapi.org/v2/{}?sources={}&apiKey={}'
+    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
 
 
 

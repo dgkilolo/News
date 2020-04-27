@@ -12,11 +12,17 @@ h1{
 }
 #news {
   border: solid rgb(150, 144, 144) 2px;
+  
 }
 .col-md-6 {  
-  height: 270px;
+  height: auto;
   text-align: center;
 }
 .p{
   text-align: right;
+}
+#image{
+  width: 350px;
+  height: 220px;
+  background-size: contain;
 }

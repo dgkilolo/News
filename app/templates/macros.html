@@ -23,12 +23,14 @@
     {%for article in articles %}
     <div  class="col-md-6 " class="card" >
     <div id="news" >
+      <img id="image" src="{{article.urlToImage}}" alt="News Image">
       <h4><u><strong>{{article.title}}</strong></u></h4>  
       <li>{{article.author}}</li>  
       <br> 
       <p>{{article.content}}</p>
       <a href="{{article.publishedAt}}"><p>Read more</p></a>
       <span class="p"><p>  {{article.url}}</span></p>
+      
       
     </div> 
     </div>

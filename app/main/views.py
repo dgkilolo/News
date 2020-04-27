@@ -1,9 +1,10 @@
-from flask import render_template
-from app import app
-from .requests import get_news,get_articles
+from flask import render_template, request, redirect, url_for
+from . import main
+from ..requests import get_news,get_articles
+
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -17,7 +18,7 @@ def index():
     title = 'News Updates'
     return render_template('index.html', title = title, sources = sources )
 
-@app.route('/search/<source_id>')
+@main.route('/search/<source_id>')
 def ArticlesNewsSource(source_id):
     '''
     Function that displays the articles from a particluar source.

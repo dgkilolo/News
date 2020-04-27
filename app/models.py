@@ -15,10 +15,11 @@ class Articles:
   Articles class to define news article objects.
   '''
 
-  def __init__ (self, author, title, description, url, publishedAt, content):
+  def __init__ (self, author, title, description, url, publishedAt, content, urlToImage):
     self.author = author
     self.title = title
     self.description = description
     self.url = url
     self.publishedAt = publishedAt
     self.content = content
+    self.urlToImage = urlToImage

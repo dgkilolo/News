@@ -1,19 +1,28 @@
 from app import app 
 import urllib.request,json
-from .models import news
+from .models import News,Articles
 
-News = news.News
-Articles = news.Articles
+# News = news.News
+# Articles = news.Articles
 
 
 # Getting api key
-api_key = app.config['NEWS_API_KEY']
+api_key = None
+
 
 # Getting the news base url
-source_base_urls = app.config["NEWS_API_BASE_URL"]
+source_base_urls = None
+
+
+def configure_request(app):
+    global api_key,source_base_urls, articles_base_urls
+    api_key = app.config['NEWS_API_KEY']
+    source_base_urls = app.config["NEWS_API_BASE_URL"]
+    articles_base_urls = app.config['NEWS_API_ARTICLES_URL']
+
 
 # Getting the articles base url
-articles_base_urls = app.config['NEWS_API_ARTICLES_URL']
+# articles_base_urls = app.config['NEWS_API_ARTICLES_URL']
 
 def process_results(news_results):
   '''
@@ -80,8 +89,9 @@ def get_articles(source_id):
         publishedAt = article.get('publishedAt')
         url = article.get('url')
         content = article.get('content')
+        urlToImage = article.get('urlToImage')
 
-        articles_object = Articles(author,title,descriptions,publishedAt,url,content)
+        articles_object = Articles(author,title,descriptions,publishedAt,url,content,urlToImage)
         article_result_list.append(articles_object)
   return  article_result_list
 
