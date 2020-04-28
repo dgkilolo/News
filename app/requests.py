@@ -7,11 +7,11 @@ from .models import News,Articles
 
 
 # Getting api key
-api_key = None
+# api_key = None
 
 
 # Getting the news base url
-source_base_urls = None
+# source_base_urls = None
 
 
 def configure_request(app):
