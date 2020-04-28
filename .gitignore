@@ -1,6 +1,6 @@
 virtual
 * .pyc
-
+instance/
 node_modules
 app/main/__pycache__/
 app/__pycache__/models.cpython-36.pyc
