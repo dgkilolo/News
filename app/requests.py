@@ -1,4 +1,4 @@
-from app import app 
+# from manage import app 
 import urllib.request,json
 from .models import News,Articles
 
